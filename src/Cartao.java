@@ -17,7 +17,7 @@ public class Cartao {
     }
 
     public Cartao( double limite){
-        this.saldo = saldo;
+        this.saldo = limite;
         this.limite = saldo;
         this.compras = new ArrayList<>();
     }

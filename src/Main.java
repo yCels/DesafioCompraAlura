@@ -28,7 +28,8 @@ public class Main{
                 System.out.println("O produto foi comprado com sucesso");
 
             } else {
-                System.out.println("Erro ao comprar o produto");
+                System.out.println("Saldo insufuciente");
+                sair = 1;
             }
             System.out.println("Digite 1 para realizar outra compra");
             System.out.println("Digite 0 para sair : ");
