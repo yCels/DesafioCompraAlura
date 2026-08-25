@@ -6,17 +6,17 @@ public class Cartao {
     private ArrayList<Compra> compras = new ArrayList<Compra>();
 
 
-    public String lancaCompra(Compra compra){
-        if (this.saldo >= compra.getPreco()){
+    public Boolean lancaCompra(Compra compra){
+        if (this.saldo <= compra.getPreco()){
             this.saldo -= compra.getPreco();
             this.compras.add(compra);
-            return "Compra realizada com sucesso!";
+            return true;
         }else {
-            return "Compra negada saldo insuficiente!";
+            return false;
         }
     }
 
-    public Cartao(double saldo, double limite, ArrayList<Compra> compras){
+    public Cartao( double limite){
         this.saldo = saldo;
         this.limite = saldo;
         this.compras = new ArrayList<>();
