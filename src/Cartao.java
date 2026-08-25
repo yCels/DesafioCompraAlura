@@ -7,7 +7,7 @@ public class Cartao {
 
 
     public Boolean lancaCompra(Compra compra){
-        if (this.saldo <= compra.getPreco()){
+        if (this.saldo >= compra.getPreco()){
             this.saldo -= compra.getPreco();
             this.compras.add(compra);
             return true;
