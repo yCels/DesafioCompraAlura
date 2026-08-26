@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main{
@@ -25,7 +26,7 @@ public class Main{
             Boolean sucessoCompra = cartao.lancaCompra(compra);
 
             if (sucessoCompra) {
-                System.out.println("O produto foi comprado com sucesso");
+                System.out.println("O produto foi comprado com sucesso \n");
 
             } else {
                 System.out.println("Saldo insufuciente");
@@ -37,6 +38,17 @@ public class Main{
             input.nextLine();
 
         }
+        System.out.println("-----------------------------------------");
+        System.out.println("COMPRAS FEITAS \n");
+
+        Collections.sort(cartao.getCompras());
+        for (Compra c : cartao.getCompras()) {
+            System.out.println(c.getNome() + " "+c.getPreco());
+        }
+        System.out.println("------------------------------------------");
+
+
+
 
 
 
